@@ -1,6 +1,5 @@
 fx_version 'adamant'
-
-games { 'gta5', 'rdr3' }
+games { 'common' }
 
 client_scripts {
     'LXGaming.Discord.Client.net.dll'
