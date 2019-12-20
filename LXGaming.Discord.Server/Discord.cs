@@ -6,12 +6,12 @@ namespace LXGaming.Discord.Server {
     public class Discord : BaseScript {
 
         public Discord() {
-            EventHandlers["discord:initialize"] += new Action(OnInitialize);
+            EventHandlers["discord:initialize"] += new Action<Player>(OnInitialize);
         }
 
-        private void OnInitialize() {
-            TriggerClientEvent("discord:initialize", "657192358726729739");
-            TriggerClientEvent("discord:update_activity", "", "redm", "", "", "");
+        private void OnInitialize([FromSource] Player player) {
+            player.TriggerEvent("discord:initialize", "657192358726729739");
+            player.TriggerEvent("discord:update_activity", "", "redm", "", "", "");
         }
     }
 }
