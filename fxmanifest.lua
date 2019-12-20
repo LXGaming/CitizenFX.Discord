@@ -8,3 +8,5 @@ client_scripts {
 server_scripts {
     'LXGaming.Discord.Server.net.dll'
 }
+
+application_id '657192358726729739'
